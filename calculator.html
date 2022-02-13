@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate</title> 
+</head>
+<body>
+    
+<p id="input">Enter 1st Number: <input id="one">
+<br/><br/>
+Enter 2nd Number: <input id="two"></p>
+<p><button onclick="fun()">=</button></p>
+Addition Result = <input id="add"><br/><br/>
+Subtraction Result = <input id="sub."><br/><br/>
+Multiplication Result = <input id="mult."><br/><br/>
+Modulus Result = <input id="mod."><br/><br/>
+Division Result = <input id="div."></p>
+
+
+<script>
+    var numOne, numTwo, result, temp;
+    function fun()
+    {
+      numOne = parseFloat(document.getElementById("one").value);
+      numTwo = parseFloat(document.getElementById("two").value);
+      if(numOne && numTwo)
+      {
+        temp = document.getElementById("result");
+        result = numOne + numTwo;
+        document.getElementById("add").value = result;
+        result = numOne - numTwo;
+        document.getElementById("sub.").value = result;
+        result = numOne * numTwo; 
+        document.getElementById("mult.").value = result;
+        result = numOne / numTwo;
+        document.getElementById("div.").value = result;
+        result = numOne % numTwo;
+        document.getElementById("mod.").value = result;
+      }
+    }
+    </script>
+
+</body>
+</html>
+
